@@ -3,8 +3,8 @@ class storm {
     # $storm_version = hiera('storm.version')
     $storm_version = "0.10.1"
     $storm_release = "apache-storm-$storm_version"
-    $nimbus_host = "nimbus"
-    $zookeeper_hosts = ["zk"]
+    $nimbus_host = "101.201.116.47"
+    $zookeeper_hosts = ["101.201.116.81"]
     $supervisor_ports = [ "6700", "6701", "6702", "6703", "6705"]
     $drpc_servers = "none"
 
