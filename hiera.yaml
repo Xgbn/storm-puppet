@@ -1,10 +1,9 @@
 ---
-:backends: - yaml
+:backends: yaml
 
 :logger: console
 
-:hierarchy: - %{env}
-            - %{::environment}
-            - common
+:hierarchy: 
+  - common
 :yaml:
-   :datadir: ./hierdata
+   :datadir: ./hieradata
