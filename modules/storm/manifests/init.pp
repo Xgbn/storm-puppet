@@ -1,11 +1,12 @@
 class storm {
 
-    $storm_version = hiera('storm.version')
+    # $storm_version = hiera('storm.version')
+    $storm_version = "0.10.1"
     $storm_release = "apache-storm-$storm_version"
-    $nimbus_host = hiera("storm.nimbus.host")
-    $zookeeper_hosts = hiera("storm.zookeeper.servers")
-    $supervisor_ports = hiera("storm.supervisor.slots.ports", none)
-    $drpc_servers = hiera("storm.drpc.servers", none)
+    $nimbus_host = "nimbus"
+    $zookeeper_hosts = "zk"
+    $supervisor_ports = [ "6700", "6701", "6702", "6703", "6705"]
+    $drpc_servers = "none"
 
     package { 'unzip':
         ensure => installed,
