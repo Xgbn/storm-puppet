@@ -4,7 +4,7 @@ node default {
  class { 'hellohell': }
  class { 'openjdk': }
  class { 'storm': }
- class { 'storm-supervisord': }
+ class { 'storm_supervisord': }
 }
 
 
