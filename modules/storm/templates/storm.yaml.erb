@@ -1,12 +1,12 @@
-y########### These MUST be filled in for a storm configuration
+########### These MUST be filled in for a storm configuration
 storm.zookeeper.servers:
 <% @zookeeper_hosts.each do |host| -%>
-     - <%= host %>
+     - "<%= host %>"
 <% end -%>
 
-nimbus.host: <%= @nimbus_host %>
+nimbus.host: "<%= @nimbus_host %>"
 
-storm.local.dir: /home/storm
+storm.local.dir: "/home/storm"
 
 <% if @supervisor_ports != 'none' %>
 supervisor.slots.ports:
